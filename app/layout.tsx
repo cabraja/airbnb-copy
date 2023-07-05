@@ -1,14 +1,15 @@
 import Navbar from './components/navbar/Navbar'
 import Modal from './components/modals/Modal'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import RegisterModal from './components/modals/RegisterModal'
 import ToasterProvider from './components/providers/ToasterProvider'
 import LoginModal from './components/modals/LoginModal'
 
 import getCurrentUser from './actions/getCurrentUser'
+import RentModal from './components/modals/RentModal'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Airbnb',
@@ -29,6 +30,7 @@ export default async function RootLayout({
         <ToasterProvider/>
         <LoginModal />
         <RegisterModal/>
+        <RentModal />
         <Navbar currentUser={currentUser}/>
         
         {children}

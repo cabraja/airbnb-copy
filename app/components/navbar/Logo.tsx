@@ -9,6 +9,7 @@ function Logo() {
 
   return (
     <Image 
+        onClick={() => router.push('/')}
         alt="logo"
         className="hidden md:block cursor-pointer"
         src={"/images/logo.png"}
